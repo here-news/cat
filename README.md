@@ -1,4 +1,4 @@
-# Content Access Royalty Ticket Protocol (CART Protocol)
+**Content Access Ticket Protocol (CAT Protocol)**
 
 **Version**: 0.1-Draft\
 **Date**: March 2025
@@ -7,7 +7,7 @@
 
 ### Overview
 
-The CART Protocol enables decentralized, signed, time-limited access to paywalled or premium content by issuing verifiable tickets. These tickets are cryptographically signed and can be redeemed across media partners, ensuring seamless value flow and user privacy.
+The CAT Protocol enables decentralized, signed, time-limited access to paywalled or premium content by issuing verifiable tickets. These tickets are cryptographically signed and can be redeemed across media partners, ensuring seamless value flow and user privacy.
 
 It aims to address today's fragmented, siloed, and inequitable content access models by introducing an open, interoperable royalty protocol that benefits creators, publishers, and audiences alike.
 
@@ -119,7 +119,7 @@ Or:
 
 ```
 GET /article/abc123
-Header: X-CART-Ticket: {base64(ticket_json)}
+Header: X-CAT-Ticket: {base64(ticket_json)}
 ```
 
 ---
@@ -133,10 +133,49 @@ Header: X-CART-Ticket: {base64(ticket_json)}
 
 ---
 
+### Value Flow & Ecosystem Roles
+
+The CAT Protocol facilitates not only access but also the traceable distribution of royalties:
+
+- **User**: Requests and redeems tickets to access premium content.
+- **Ticket Issuer**: Validates user payment and rights, signs tickets, and logs access events.
+- **Content Provider**: Verifies ticket validity, serves requested content, and records usage logs.
+- **Royalty Aggregator (may be same as Issuer)**: Periodically settles payments with content providers based on access logs.
+- **Content Creator**: Receives royalties based on usage records and contractual share agreements.
+
+---
+
+### Sequence Diagram (Data & Value Flow)
+
+**Actors**: `User`, `Ticket Issuer`, `Content Provider`, `Royalty Aggregator`, `Content Creator`
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant I as Ticket Issuer
+    participant C as Content Provider
+    participant R as Royalty Aggregator
+    participant CR as Content Creator
+
+    U->>I: Request Ticket (with payment or proof)
+    I->>I: Validate rights & log intent
+    I-->>U: Return Signed CAT Ticket
+
+    U->>C: Request Content + CAT Ticket
+    C->>C: Verify signature & validity
+    C-->>U: Serve content
+    C-->>R: Log redemption for royalties
+
+    R->>C: Aggregate logs
+    R->>CR: Distribute royalty payouts
+```
+
+---
+
 ### Next Steps
 
 - Define canonical JSON serializer for signing
 - Release client/server reference implementations
-- Integrate with Here.News and pilot partners (e.g. WSJ.com, niche publishers)
+- Integrate with Here.News and pilot partners (e.g. Anna’s Archive, niche publishers)
 - Align on royalty settlement framework (monthly, per access, or hybrid)
 
