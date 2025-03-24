@@ -1,4 +1,4 @@
-**Content Access Royalty Ticket Protocol (CART Protocol)**
+# Content Access Royalty Ticket Protocol (CART Protocol)
 
 **Version**: 0.1-Draft\
 **Date**: March 2025
