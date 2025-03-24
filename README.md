@@ -1,4 +1,4 @@
-# Content Access Ticket Protocol (CAT Protocol)**
+# Content Access Ticket Protocol (CAT Protocol)
 
 **Version**: 0.1-Draft\
 **Date**: March 2025
@@ -176,6 +176,6 @@ sequenceDiagram
 
 - Define canonical JSON serializer for signing
 - Release client/server reference implementations
-- Integrate with Here.News and pilot partners (e.g. Anna’s Archive, niche publishers)
+- Integrate with Here.News and pilot partners (e.g. Local media, niche publishers)
 - Align on royalty settlement framework (monthly, per access, or hybrid)
 
