@@ -1,4 +1,4 @@
-**Content Access Ticket Protocol (CAT Protocol)**
+# Content Access Ticket Protocol (CAT Protocol)**
 
 **Version**: 0.1-Draft\
 **Date**: March 2025
