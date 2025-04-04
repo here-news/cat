@@ -32,9 +32,9 @@ The following diagram illustrates the key stakeholders and workflow of the CAT P
 1. User requests and pays for access to content
 2. Ticket Issuer signs and returns a CAT ticket
 3. User presents the ticket to the Content Service
-4. Content Service returns the requested content
+4. Content Service verifies the signature in the ticket and returns the requested content or denies access(if it's expired or invalid)
 5. Content Service logs the access for royalty tracking
-6. Royalties are distributed to content creators and publishers
+6. (Optional) Royalties are distributed to content creators and publishers
 
 ---
 
