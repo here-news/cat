@@ -8,6 +8,20 @@ This repository provides a basic implementation of the Content Access Ticket (CA
 
 For a detailed specification of the protocol, including sequence diagrams and technical details, please refer to [CAT.md](CAT.md).
 
+### Protocol Flow Diagram
+
+The following diagram illustrates the key stakeholders and workflow of the CAT Protocol:
+
+![CAT Protocol Flow Diagram](cat_diagram.svg)
+
+1. User requests and pays for access to content
+2. Ticket Issuer signs and returns a CAT ticket
+3. User presents the ticket to the Content Service
+4. Content Service returns the requested content
+5. Content Service logs the access for royalty tracking
+6. Royalties are distributed to content creators and publishers
+
+
 ### Implementation
 
 This repository includes a basic implementation of a CAT content service using FastAPI and a ticket issuer using the `cryptography` library.
