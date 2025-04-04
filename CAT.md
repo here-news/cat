@@ -23,6 +23,21 @@ It aims to address today's fragmented, siloed, and inequitable content access mo
 
 ---
 
+### Protocol Flow Diagram
+
+The following diagram illustrates the key stakeholders and workflow of the CAT Protocol:
+
+![CAT Protocol Flow Diagram](cat_diagram.svg)
+
+1. User requests and pays for access to content
+2. Ticket Issuer signs and returns a CAT ticket
+3. User presents the ticket to the Content Service
+4. Content Service returns the requested content
+5. Content Service logs the access for royalty tracking
+6. Royalties are distributed to content creators and publishers
+
+---
+
 ### Use Cases
 
 -   Reading paywalled articles (e.g. WSJ, NYT)
