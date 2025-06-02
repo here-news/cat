@@ -259,7 +259,7 @@ A unified digital currency co-issued by central banks on a neutral blockchain wo
 ## 11. References
 
 * IMF SDR Whitepapers: https://www.imf.org/en/About/Factsheets/Sheets/2016/08/01/14/51/Special-Drawing-Right-SDR
-* BIS Project mBridge: https://www.bis.org/about/bisih/topics/cbdc/mbridge.htm
-* Libra/Diem Whitepapers: https://www.diem.com/en-us/white-paper/
+* BIS Project mBridge: https://www.bis.org/publ/othp59.htm
+* Libra/Diem Whitepapers: https://developers.diem.com/docs/technical-papers/the-diem-blockchain-paper/
 * Ethereum EIP-712 (Typed messages): https://eips.ethereum.org/EIPS/eip-712
 * Bitcoin Whitepaper: https://bitcoin.org/bitcoin.pdf
