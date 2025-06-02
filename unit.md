@@ -267,4 +267,4 @@ A unified digital currency co-issued by central banks on a neutral blockchain wo
 * Libra/Diem Whitepapers: https://developers.diem.com/docs/technical-papers/the-diem-blockchain-paper/
 * Ethereum EIP-712 (Typed messages): https://eips.ethereum.org/EIPS/eip-712
 * Bitcoin Whitepaper: https://bitcoin.org/bitcoin.pdf
-* [Towards a Shared Global Digital Currency: Historical Context, Current Developments, and Future Outlook](./Towards%20a%20Shared%20Global%20Digital%20Currency_%20Historical%20Context,%20Current%20Developments,%20and%20Future%20Outlo.pdf)
+* Towards a Shared Global Digital Currency: Historical Context, Current Developments, and Future Outlook: https://docs.google.com/document/d/1VKhH4cIsqydQV03YR_EvNTJ0R7XY6x2pNGpSmogicP0/
