@@ -1,16 +1,20 @@
-# A Unified Blockchain-Based Monetary Token(UNIT) Backed by Central Banks
+# A Unified Blockchain-Based Monetary Token (UNIT) Backed by Central Banks
+
+## Background & Motivation
+
+The global financial system stands at a pivotal moment. For decades, fragmented monetary policies, outdated payment infrastructures, and the rapid rise of private digital currencies have exposed deep inefficiencies and inequities in cross-border settlement and access to value. Central banks now face mounting pressure to modernize, collaborate, and offer a sovereign alternative to both volatile cryptocurrencies and the dominance of a single national currency in global trade.
+
+At the same time, the emergence of programmable money, decentralized finance, and digital content economies calls for a new foundation—one that is open, auditable, and adaptable to the needs of both institutions and individuals.
+
+The UNIT project directly addresses these challenges. By uniting the strengths of public blockchains and central bank trust, UNIT aims to deliver a programmable, neutral, and globally accessible digital currency. Through multi-central bank governance, robust privacy, and seamless integration with protocols like CAT, UNIT aspires to become the backbone of a fair, efficient, and future-proof global economy.
 
 ## Abstract
 
-We propose a decentralized, Proof-of-Work (PoW) blockchain that supports a unified digital currency initially pegged 1:1 to the US dollar (USD), and gradually governed and co-issued by multiple central banks. This token, named **UNIT**, aims to provide a globally neutral, transparent, programmable monetary system for instant cross-border settlement, reduced volatility, and minimized reliance on private stablecoins.
-
----
+UNIT is a decentralized, Proof-of-Work (PoW) blockchain protocol supporting a unified digital currency initially pegged 1:1 to the US dollar (USD), and gradually governed and co-issued by multiple central banks. The core token, **UNIT**, is designed to provide a globally neutral, transparent, and programmable monetary system for instant cross-border settlement, reduced volatility, and minimized reliance on private stablecoins. By merging the strengths of public blockchains and sovereign monetary policy, UNIT offers a new paradigm for programmable, auditable, and fair global finance.
 
 ## 1. Introduction
 
-Traditional fiat currencies operate through national infrastructures, often resulting in inefficiencies, volatility, and reliance on intermediaries. Meanwhile, crypto-assets have demonstrated decentralized settlement but lack sovereign guarantees. The UNIT project merges these paradigms by introducing a public chain co-governed by central banks with programmable monetary logic.
-
----
+Traditional fiat currencies operate through national infrastructures, often resulting in inefficiencies, volatility, and reliance on intermediaries. Meanwhile, crypto-assets have demonstrated decentralized settlement but lack sovereign guarantees. UNIT merges these paradigms by introducing a public chain co-governed by central banks with programmable monetary logic, aiming to bridge the gap between trust, transparency, and innovation in the digital era.
 
 ## 2. Key Features
 
@@ -263,3 +267,4 @@ A unified digital currency co-issued by central banks on a neutral blockchain wo
 * Libra/Diem Whitepapers: https://developers.diem.com/docs/technical-papers/the-diem-blockchain-paper/
 * Ethereum EIP-712 (Typed messages): https://eips.ethereum.org/EIPS/eip-712
 * Bitcoin Whitepaper: https://bitcoin.org/bitcoin.pdf
+* [Towards a Shared Global Digital Currency: Historical Context, Current Developments, and Future Outlook](./Towards%20a%20Shared%20Global%20Digital%20Currency_%20Historical%20Context,%20Current%20Developments,%20and%20Future%20Outlo.pdf)
