@@ -50,6 +50,14 @@ This document outlines the technical architecture for a decentralized, Proof-of-
 
 ---
 
+## Architecture UML Diagram
+
+![UNIT Transaction and Governance Flow](unit_uml.svg)
+
+*Figure: UML diagram illustrating the transaction, validation, and governance flow in the UNIT architecture.*
+
+---
+
 ## 2. Data Structures
 
 ### 2.1 Account
@@ -171,4 +179,3 @@ This document outlines the technical architecture for a decentralized, Proof-of-
 ## 8. Summary
 
 This architecture aims to balance decentralization, sovereign legitimacy, and programmability. By encoding monetary policy, FX conversion, and issuance logic into smart contracts over a PoW-secured chain, UNIT becomes a foundation for fair, efficient, and globally coordinated finance.
- 
