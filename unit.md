@@ -160,10 +160,30 @@ A unified digital currency co-issued by central banks on a neutral blockchain wo
 
 ---
 
-## 10. References
+## 10. Stability Mechanisms
 
-* IMF SDR Whitepapers
-* BIS Project mBridge
-* Libra/Diem Whitepapers
-* Ethereum EIP-712 (Typed messages)
-* Bitcoin Whitepaper
+### 10.1 Reserve-Backed and Policy-Governed Peg
+
+The stability of UNIT begins with a foundation in sovereign-backed reserves. Initially, UNIT is pegged 1:1 to the US dollar and issued solely by the US Federal Reserve, ensuring hard monetary backing. As additional central banks join (e.g., ECB, BOJ, PBOC), each is required to issue only in accordance with verifiable reserves. All issuance and burning actions are governed by policy-enforced smart contracts (MintController), limiting supply changes to approved parameters. This model reduces inflationary risks and enforces disciplined monetary issuance.
+
+### 10.2 Dynamic FX-Oriented Basket Adjustment
+
+To ensure long-term value stability beyond the US dollar, UNIT evolves into a basket-based token reflecting a diversified mix of central bank currencies. The composition is governed by the BasketManager smart contract, which adjusts weights daily based on real-time FX rates and the proportional issuance of each participating central bank. This dynamic adjustment mechanism minimizes exposure to any single currency's volatility and makes UNIT resilient to macroeconomic shifts.
+
+### 10.3 Automated Market-Making for FX Stability
+
+Cross-currency transactions are facilitated through Automated Market Maker (AMM) contracts using real-time FX data from decentralized oracles. These AMMs allow users to swap between UNIT, FedUSD, ECB_EUR, etc., ensuring market-based exchange and liquidity. By embedding FX stabilization into liquidity pools, UNIT mitigates slippage and rate shocks that could undermine its peg.
+
+### 10.4 Transparency, Audits, and Emergency Breakers
+
+All minting, burning, basket rebalancing, and FX updates are transparently recorded on-chain. This allows public and institutional observers to audit UNIT’s backing and behavior in real time. To safeguard against systemic attacks or rapid destabilization, a 3-of-4 central bank quorum can invoke emergency breakers to pause minting, halt certain operations, or reset oracle feeds. These mechanisms ensure the system can react swiftly and responsibly in crisis scenarios while preserving trust and continuity.
+
+---
+
+## 11. References
+
+* IMF SDR Whitepapers: https://www.imf.org/en/About/Factsheets/Sheets/2016/08/01/14/51/Special-Drawing-Right-SDR
+* BIS Project mBridge: https://www.bis.org/about/bisih/topics/cbdc/mbridge.htm
+* Libra/Diem Whitepapers: https://www.diem.com/en-us/white-paper/
+* Ethereum EIP-712 (Typed messages): https://eips.ethereum.org/EIPS/eip-712
+* Bitcoin Whitepaper: https://bitcoin.org/bitcoin.pdf
