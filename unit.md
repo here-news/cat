@@ -38,7 +38,73 @@ Traditional fiat currencies operate through national infrastructures, often resu
 
 ---
 
-## 3. Architecture Overview
+## 3. Technical Stack & Chain Model
+
+From a technical perspective, the **UNIT chain** as designed follows a model that is:
+
+---
+
+## More like Ethereum (account-based)
+
+But with a **Bitcoin-style Proof-of-Work (PoW)** consensus mechanism.
+
+Let’s break it down clearly:
+
+---
+
+## Comparison Overview
+
+| Feature                   | Bitcoin              | Ethereum           | UNIT Chain (Proposed)            |
+| ------------------------- | -------------------- | ------------------ | -------------------------------- |
+| **Consensus**             | PoW (Nakamoto)       | PoS (now)          | PoW (Nakamoto-style)             |
+| **Ledger model**          | UTXO                 | Account-based      | Account-based                    |
+| **Smart contracts**       | No                   | Full EVM           | Selective contracts              |
+| **Gas model**             | Fixed tx fees        | Gas + dynamic fees | Fixed or semi-fixed fees in UNIT |
+| **Token issuance**        | Block subsidy        | Programmable       | Oracle/CB-authorized minting     |
+| **Governance**            | Off-chain (informal) | Minimal            | Multi-CB on-chain governance     |
+| **Currency denomination** | BTC                  | ETH + ERC20        | UNIT + FedUSD, ECB_EUR, etc.     |
+
+---
+
+## Why Account-Based + PoW?
+
+* **PoW** provides political neutrality and decentralization, ideal for international trust across central banks.
+* Account-based ledger simplifies:
+  * Off-chain signed messages (e.g. IOUs).
+  * Balance tracking for multiple fiat-pegged tokens.
+  * Cross-currency swaps and FX operations.
+* Smart contract layer is minimal by design: only core modules like `MintController`, `BasketManager`, `SignatureVerifier`, and `GovernanceDAO` are required — not general-purpose like Ethereum.
+
+This makes the system:
+
+* Efficient
+* Auditable
+* Programmable enough, but not bloated or vulnerable to arbitrary dApps.
+
+---
+
+## Inspirations
+
+UNIT chain borrows good elements from:
+
+* **Bitcoin**: for its immutability, PoW decentralization, and ethos of minimal trust.
+* **Ethereum**: for its account ledger and smart contract logic (selectively applied).
+* **Cosmos/Tendermint**: in governance design (quorum voting).
+* **Libra/Diem**: in multi-asset basket modeling (but decentralized and public).
+
+---
+
+## Suggested Stack & Standards
+
+* **Hashing**: SHA-256 (Bitcoin-level)
+* **Signatures**: ECDSA / optionally EdDSA (for efficiency)
+* **Chain state**: Account mapping with nonce & metadata
+* **Contract engine**: WASM or a trimmed-down EVM variant
+* **Oracle feed**: Off-chain feeds committed via threshold multisig (like Chainlink but sovereign-run)
+
+---
+
+## Architecture Overview
 
 ```plaintext
 [PoW Layer]          -> Public, neutral, secure
@@ -46,6 +112,16 @@ Traditional fiat currencies operate through national infrastructures, often resu
 [Oracle Layer]       -> Feed FX rates, inflation, reserve ratios
 [User Layer]         -> Wallets, banks, dApps interact via APIs and messages
 ```
+
+---
+
+## 3.1 Architecture Diagram and Flow
+
+The following diagram illustrates the transaction, validation, and governance flow in the UNIT architecture:
+
+![UNIT Transaction and Governance Flow](unit_uml.svg)
+
+*Figure: UML diagram showing the main actors and modules in the UNIT chain, including user wallets, signature verification, ledger updates, oracles, basket management, mint/burn controls, and governance.*
 
 ---
 
@@ -154,29 +230,29 @@ This synergy positions UNIT not only as a global settlement layer for traditiona
 
 ---
 
-## 9. Conclusion
+## 9. Stability Mechanisms
 
-A unified digital currency co-issued by central banks on a neutral blockchain would dramatically reshape the global financial system, offering a sovereign alternative to unstable cryptocurrencies and opaque fiat systems. Starting with USD and expanding via governance and collaboration, UNIT can become the foundation of a truly programmable and fair global economy.
-
----
-
-## 10. Stability Mechanisms
-
-### 10.1 Reserve-Backed and Policy-Governed Peg
+### 9.1 Reserve-Backed and Policy-Governed Peg
 
 The stability of UNIT begins with a foundation in sovereign-backed reserves. Initially, UNIT is pegged 1:1 to the US dollar and issued solely by the US Federal Reserve, ensuring hard monetary backing. As additional central banks join (e.g., ECB, BOJ, PBOC), each is required to issue only in accordance with verifiable reserves. All issuance and burning actions are governed by policy-enforced smart contracts (MintController), limiting supply changes to approved parameters. This model reduces inflationary risks and enforces disciplined monetary issuance.
 
-### 10.2 Dynamic FX-Oriented Basket Adjustment
+### 9.2 Dynamic FX-Oriented Basket Adjustment
 
 To ensure long-term value stability beyond the US dollar, UNIT evolves into a basket-based token reflecting a diversified mix of central bank currencies. The composition is governed by the BasketManager smart contract, which adjusts weights daily based on real-time FX rates and the proportional issuance of each participating central bank. This dynamic adjustment mechanism minimizes exposure to any single currency's volatility and makes UNIT resilient to macroeconomic shifts.
 
-### 10.3 Automated Market-Making for FX Stability
+### 9.3 Automated Market-Making for FX Stability
 
 Cross-currency transactions are facilitated through Automated Market Maker (AMM) contracts using real-time FX data from decentralized oracles. These AMMs allow users to swap between UNIT, FedUSD, ECB_EUR, etc., ensuring market-based exchange and liquidity. By embedding FX stabilization into liquidity pools, UNIT mitigates slippage and rate shocks that could undermine its peg.
 
-### 10.4 Transparency, Audits, and Emergency Breakers
+### 9.4 Transparency, Audits, and Emergency Breakers
 
 All minting, burning, basket rebalancing, and FX updates are transparently recorded on-chain. This allows public and institutional observers to audit UNIT’s backing and behavior in real time. To safeguard against systemic attacks or rapid destabilization, a 3-of-4 central bank quorum can invoke emergency breakers to pause minting, halt certain operations, or reset oracle feeds. These mechanisms ensure the system can react swiftly and responsibly in crisis scenarios while preserving trust and continuity.
+
+---
+
+## 10. Conclusion
+
+A unified digital currency co-issued by central banks on a neutral blockchain would dramatically reshape the global financial system, offering a sovereign alternative to unstable cryptocurrencies and opaque fiat systems. Starting with USD and expanding via governance and collaboration, UNIT can become the foundation of a truly programmable and fair global economy.
 
 ---
 
